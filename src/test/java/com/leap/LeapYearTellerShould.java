@@ -67,9 +67,10 @@ class LeapYearTellerShould {
 	}
 	@Test
 	public void confirm_leap_year() {
-		LeapYearTeller leap = new LeapYearTeller(new int[] {2000,1800,2016,0,-2103});
-		boolean[] res = leap.isLeapYear();
-		Assert.assertArrayEquals(new boolean[] {true,false,true,false,false}, res);
+		LeapYearTeller leap = new LeapYearTeller(2020);
+		boolean res = leap.isLeapYear();
+		Assert.assertEquals(true,res);
+		
 		
 	}
 
