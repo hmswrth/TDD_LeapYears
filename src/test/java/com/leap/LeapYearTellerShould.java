@@ -38,6 +38,14 @@ class LeapYearTellerShould {
 		LeapYearTeller leap = new LeapYearTeller(2008);
 		boolean res = leap.isDivisibleBy4ButNotBy100();
 		Assert.assertTrue(res == true);
+		
+		LeapYearTeller leap2012 = new LeapYearTeller(2012);
+		res = leap2012.isDivisibleBy4ButNotBy100();
+		Assert.assertTrue(res == true);
+		
+		LeapYearTeller leap2016 = new LeapYearTeller(2016);
+		res = leap2016.isDivisibleBy4ButNotBy100();
+		Assert.assertTrue(res == true);
 	}
 	
 
