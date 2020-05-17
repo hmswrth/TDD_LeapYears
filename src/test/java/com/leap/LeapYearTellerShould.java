@@ -20,6 +20,18 @@ class LeapYearTellerShould {
 		LeapYearTeller leap2100 = new LeapYearTeller(2100);
 		boolean res2100 = leap2100.isLeapYear();
 		Assert.assertTrue(res2100 == false);
+		
+		LeapYearTeller leap1700 = new LeapYearTeller(1700);
+		boolean res1700 = leap1700.isLeapYear();
+		Assert.assertTrue(res1700 == false);
+		
+		LeapYearTeller leap1800 = new LeapYearTeller(1800);
+		boolean res1800 = leap1800.isLeapYear();
+		Assert.assertTrue(res1800 == false);
+		
+		LeapYearTeller leap1900 = new LeapYearTeller(1900);
+		boolean res1900 = leap1900.isLeapYear();
+		Assert.assertTrue(res1900 == false);
 	}
 	
 	
