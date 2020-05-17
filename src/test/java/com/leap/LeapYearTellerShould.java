@@ -54,8 +54,8 @@ class LeapYearTellerShould {
 	}
 	@Test 
 	public void identify_invalid_year_for_negative_and_0_integers() {
-		LeapYearTeller leap = new LeapYearTeller(-2017);
-		boolean res = leap.invalidYear();
+		LeapYearTeller leap = new LeapYearTeller(-201);
+		boolean res = leap.isInvalidYear();
 		Assert.assertEquals(true,res);
 	}
 	
