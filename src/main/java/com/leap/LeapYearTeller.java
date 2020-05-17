@@ -6,6 +6,7 @@ public class LeapYearTeller {
 	private boolean isYearDivisibleBy100ButNotBy400;
 	private boolean isDivisibleBy4ButNotBy100;
 	private boolean notDivisibleBy4;
+	private boolean invalidYear;
 
 	public LeapYearTeller(int year) {
 		this.year = year;
@@ -45,6 +46,10 @@ public class LeapYearTeller {
 
 	public void setNotDivisibleBy4() {
 		this.notDivisibleBy4 = (this.year % 4 != 0);
+	}
+
+	public boolean invalidYear() {
+		return invalidYear;
 	}
 
 }

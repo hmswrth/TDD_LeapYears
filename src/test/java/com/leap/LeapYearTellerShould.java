@@ -52,6 +52,12 @@ class LeapYearTellerShould {
 		boolean res = leap.notDivisibleBy4();
 		Assert.assertTrue(res == false);
 	}
+	@Test 
+	public void identify_invalid_year_for_negative_and_0_integers() {
+		LeapYearTeller leap = new LeapYearTeller(-2017);
+		boolean res = leap.invalidYear();
+		Assert.assertEquals(true,res);
+	}
 	
 
 }
