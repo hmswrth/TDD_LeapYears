@@ -48,5 +48,12 @@ class LeapYearTellerShould {
 		Assert.assertTrue(res == true);
 	}
 	
+	@Test
+	public void confirm_year_not_divisible_by_4_are_not_leap_years() {
+		LeapYearTeller leap = new LeapYearTeller(2017);
+		boolean res = leap.notDivisibleBy4();
+		Assert.assertTrue(res == false);
+	}
+	
 
 }
