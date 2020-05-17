@@ -17,6 +17,9 @@ public class LeapYearTeller {
 		setIsInvalidYear();
 	}
 
+	public LeapYearTeller(int[] yearArray) {
+	}
+
 	public boolean isYearDivisibleBy400() {
 		return isYearDivisibleBy400;
 	}
@@ -54,6 +57,10 @@ public class LeapYearTeller {
 	}
 	public void setIsInvalidYear() {
 		this.isInvalidYear = (this.year <= 0);
+	}
+
+	public boolean[] isLeapYear() {
+		return null;
 	}
 
 }
