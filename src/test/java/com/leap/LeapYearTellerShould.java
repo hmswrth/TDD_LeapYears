@@ -33,7 +33,12 @@ class LeapYearTellerShould {
 		boolean res1900 = leap1900.isYearDivisibleBy100ButNotBy400();
 		Assert.assertTrue(res1900 == false);
 	}
-	
+	@Test
+	public void confirm_year_divisible_by_4_but_not_by_100_are_leap_years() {
+		LeapYearTeller leap = new LeapYearTeller(2008);
+		boolean res = leap.isDivisibleBy4ButNotBy100();
+		Assert.assertTrue(res == true);
+	}
 	
 
 }
