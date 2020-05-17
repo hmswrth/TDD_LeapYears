@@ -15,9 +15,5 @@ public class LeapYearTeller {
 	public boolean isYearDivisibleBy100ButNotBy400() {
 		return isYearDivisibleBy100ButNotBy400;
 	}
-	
-	public boolean isLeapYear() {
-		return isYearDivisibleBy400() && !isYearDivisibleBy100ButNotBy400() ;
-	}
 
 }
