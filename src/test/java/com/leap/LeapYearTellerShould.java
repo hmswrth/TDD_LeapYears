@@ -17,33 +17,33 @@ class LeapYearTellerShould {
 	public void confirm_year_divisible_by_100_but_not_by_400_are_not_leap_years() {
 		LeapYearTeller leap2100 = new LeapYearTeller(2100);
 		boolean res2100 = leap2100.isYearDivisibleBy100ButNotBy400();
-		Assert.assertTrue(res2100 == false);
+		Assert.assertEquals(false,res2100);
 		
 		LeapYearTeller leap1700 = new LeapYearTeller(1700);
 		boolean res1700 = leap1700.isYearDivisibleBy100ButNotBy400();
-		Assert.assertTrue(res1700 == false);
+		Assert.assertEquals(false,res1700);
 		
 		LeapYearTeller leap1800 = new LeapYearTeller(1800);
 		boolean res1800 = leap1800.isYearDivisibleBy100ButNotBy400();
-		Assert.assertTrue(res1800 == false);
+		Assert.assertEquals(false,res1800);
 		
 		LeapYearTeller leap1900 = new LeapYearTeller(1900);
 		boolean res1900 = leap1900.isYearDivisibleBy100ButNotBy400();
-		Assert.assertTrue(res1900 == false);
+		Assert.assertEquals(false,res1900);
 	}
 	@Test
 	public void confirm_year_divisible_by_4_but_not_by_100_are_leap_years() {
 		LeapYearTeller leap = new LeapYearTeller(2008);
 		boolean res = leap.isDivisibleBy4ButNotBy100();
-		Assert.assertTrue(res == true);
+		Assert.assertEquals(true,res);
 		
 		LeapYearTeller leap2012 = new LeapYearTeller(2012);
-		res = leap2012.isDivisibleBy4ButNotBy100();
-		Assert.assertTrue(res == true);
+		boolean res2012 = leap2012.isDivisibleBy4ButNotBy100();
+		Assert.assertEquals(true,res2012);
 		
 		LeapYearTeller leap2016 = new LeapYearTeller(2016);
-		res = leap2016.isDivisibleBy4ButNotBy100();
-		Assert.assertTrue(res == true);
+		boolean res2016 = leap2016.isDivisibleBy4ButNotBy100();
+		Assert.assertEquals(true,res2016);
 	}
 	
 	@Test
@@ -57,6 +57,10 @@ class LeapYearTellerShould {
 		LeapYearTeller leap = new LeapYearTeller(-201);
 		boolean res = leap.isInvalidYear();
 		Assert.assertEquals(true,res);
+		
+		LeapYearTeller leap0 = new LeapYearTeller(0);
+		boolean res0 = leap0.isInvalidYear();
+		Assert.assertEquals(true,res0);
 	}
 	
 
