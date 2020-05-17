@@ -9,6 +9,7 @@ public class LeapYearTeller {
 		this.year = year;
 	    this.isYearDivisibleBy400 = (this.year % 400 == 0);
 	    this.isYearDivisibleBy100ButNotBy400 = (this.year % 100 == 0) && (this.year %400 != 0);
+	    this.isDivisibleBy4ButNotBy100 = (this.year % 4 ==0) && (this.year % 100 != 0);
 	}
 	public boolean isYearDivisibleBy400() {
 		return isYearDivisibleBy400;
